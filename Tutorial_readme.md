@@ -11,7 +11,7 @@ Before running any visualization modules, pull the pre-packaged Docker image fro
 ### 1. Pull the Docker Image from Docker Hub
 No manual building is required. Pull the ready-to-run container directly:
 ```bash
-docker pull cblnabiadmin/metrico_viz:v1
+docker pull mantrilabnabi/metrico_viz:v1
 ```
 
 ### 2. Clone the Metrico Repository
@@ -26,7 +26,7 @@ Execute the master runner immediately with default test datasets to verify your 
 ```bash
 sudo docker run --rm \
   -v $(pwd):/Metrico_project \
-  cblnabiadmin/metrico_viz:v1 python3 /Metrico_project/run_all.py
+  mantrilabnabi/metrico_viz:v1 python3 /Metrico_project/run_all.py
 ```
 
 > **Note on Prerequisites:** If you plan to analyze your own custom samples rather than the provided example data, you must first convert your raw annotation outputs (from eggNOG-mapper or HUMAnN) into compatible matrix files using the pre-processing scripts detailed in [⚙️ Prerequisites & Data Pre-Processing Tutorial](#️-prerequisites--data-pre-processing-tutorial).
@@ -373,7 +373,7 @@ The pipeline environment can be pulled directly from Docker Hub or loaded from a
 
 ### Option A: Pull Pre-built Container from Docker Hub (Recommended)
 ```bash
-docker pull cblnabiadmin/metrico_viz:v1
+docker pull mantrilabnabi/metrico_viz:v1
 ```
 
 ### Option B: Load from Local Archive File
@@ -386,7 +386,7 @@ Verify that the image has loaded successfully:
 ```bash
 sudo docker images
 ```
-*(You should see `cblnabiadmin/metrico_viz:v1` or `metrico_viz:v1` listed under REPOSITORY).*
+*(You should see `mantrilabnabi/metrico_viz:v1` or `metrico_viz:v1` listed under REPOSITORY).*
 
 ---
 
@@ -398,7 +398,7 @@ Example input datasets are pre-packaged inside the `input_file/` directory. Runn
 ```bash
 sudo docker run --rm \
   -v $(pwd):/Metrico_project \
-  cblnabiadmin/metrico_viz:v1 python3 /Metrico_project/run_all.py
+  mantrilabnabi/metrico_viz:v1 python3 /Metrico_project/run_all.py
 ```
 
 ### 2. Full Master Command (Custom Data Across All 9 Modules)
@@ -407,7 +407,7 @@ Pass custom input files directly via command-line arguments:
 ```bash
 sudo docker run --rm \
   -v $(pwd):/Metrico_project \
-  cblnabiadmin/metrico_viz:v1 python3 /Metrico_project/run_all.py \
+  mantrilabnabi/metrico_viz:v1 python3 /Metrico_project/run_all.py \
     -m /Metrico_project/input_file/Plant-host.csv \
     -o /Metrico_project/output \
     --prefix Metrico \
@@ -458,7 +458,7 @@ You can execute any analysis script independently using `-i` (input), `-m` (meta
 
 ### A. CAZy Class Heatmap
 ```bash
-sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
+sudo docker run --rm -v $(pwd):/Metrico_project mantrilabnabi/metrico_viz:v1 \
   python3 /Metrico_project/cazy_heatmap.py \
     -i /Metrico_project/input_file/cazy_class_matrix.tsv \
     -m /Metrico_project/input_file/Plant-host.csv \
@@ -467,7 +467,7 @@ sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
 
 ### B. GH Family Heatmap
 ```bash
-sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
+sudo docker run --rm -v $(pwd):/Metrico_project mantrilabnabi/metrico_viz:v1 \
   python3 /Metrico_project/gh_family_heatmap.py \
     -i /Metrico_project/input_file/gh_family_filtered.csv \
     -m /Metrico_project/input_file/Plant-host.csv \
@@ -476,7 +476,7 @@ sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
 
 ### C. COG Categories Bar Plots & Heatmap
 ```bash
-sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
+sudo docker run --rm -v $(pwd):/Metrico_project mantrilabnabi/metrico_viz:v1 \
   python3 /Metrico_project/cog_abundance_plot.py \
     -i /Metrico_project/input_file/all_cog_matrix.csv \
     -m /Metrico_project/input_file/Plant-host.csv \
@@ -485,7 +485,7 @@ sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
 
 ### D. EC Matrix Heatmap
 ```bash
-sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
+sudo docker run --rm -v $(pwd):/Metrico_project mantrilabnabi/metrico_viz:v1 \
   python3 /Metrico_project/ec_heatmap.py \
     -i /Metrico_project/input_file/all_ec_matrix.tsv \
     -m /Metrico_project/input_file/Plant-host.csv \
@@ -494,7 +494,7 @@ sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
 
 ### E. EC Circos Plot
 ```bash
-sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
+sudo docker run --rm -v $(pwd):/Metrico_project mantrilabnabi/metrico_viz:v1 \
   python3 /Metrico_project/ec_circos_plot.py \
     -i /Metrico_project/input_file/all_sample_ec.tsv \
     -m /Metrico_project/input_file/Plant-host.csv \
@@ -503,7 +503,7 @@ sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
 
 ### F. KO Matrix Heatmap
 ```bash
-sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
+sudo docker run --rm -v $(pwd):/Metrico_project mantrilabnabi/metrico_viz:v1 \
   python3 /Metrico_project/ko_heatmap.py \
     -i /Metrico_project/input_file/all_ko_matrix.tsv \
     -m /Metrico_project/input_file/Plant-host.csv \
@@ -512,7 +512,7 @@ sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
 
 ### G. KO Circos Plot
 ```bash
-sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
+sudo docker run --rm -v $(pwd):/Metrico_project mantrilabnabi/metrico_viz:v1 \
   python3 /Metrico_project/ko_circos_plot.py \
     -i /Metrico_project/input_file/all_sample_ko.tsv \
     --mod /Metrico_project/input_file/all_module.tsv \
@@ -522,7 +522,7 @@ sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
 
 ### H. MetaCyc Pathway Bubble Plot
 ```bash
-sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
+sudo docker run --rm -v $(pwd):/Metrico_project mantrilabnabi/metrico_viz:v1 \
   python3 /Metrico_project/pathway_bubble_plot.py \
     -i /Metrico_project/input_file/all-pathabundance_cpm.tsv \
     -m /Metrico_project/input_file/Plant-host.csv \
@@ -531,7 +531,7 @@ sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
 
 ### I. Ordination & PERMANOVA Analysis
 ```bash
-sudo docker run --rm -v $(pwd):/Metrico_project cblnabiadmin/metrico_viz:v1 \
+sudo docker run --rm -v $(pwd):/Metrico_project mantrilabnabi/metrico_viz:v1 \
   python3 /Metrico_project/ordination_permanova.py \
     -i /Metrico_project/input_file/all_ko_matrix.tsv \
     -m /Metrico_project/input_file/Plant-host.csv \
