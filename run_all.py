@@ -59,7 +59,7 @@ parser.add_argument(
 parser.add_argument(
     "--gh-family-input", 
     type=str, 
-    default="all_cazy_count.csv",
+    default="gh_family_filtered.csv",
     help="Input file for GH Family heatmap"
 )
 parser.add_argument(
