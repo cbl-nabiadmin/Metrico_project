@@ -15,10 +15,18 @@ docker pull mantrilabnabi/metrico_viz:v1
 ```
 
 ### 2. Clone the Metrico Repository
-Clone the repository to get access to all analysis modules and pre-configured example datasets:
+Large input matrices in input_file/ are tracked using Git LFS. You must install and initialize git-lfs before cloning or run git lfs pull after cloning to download actual data files instead of pointer files:
 ```bash
-git clone https://github.com/cbl-nabiadmin/Metrico_project.git
+# Install and initialize Git LFS (Ubuntu/Debian)
+sudo apt-get update && sudo apt-get install -y git-lfs
+git lfs install
+
+# Clone repository and navigate into folder
+git clone [https://github.com/cbl-nabiadmin/Metrico_project.git](https://github.com/cbl-nabiadmin/Metrico_project.git)
 cd Metrico_project
+
+# Pull actual Git LFS binary datasets
+git lfs pull
 ```
 
 ### 3. Quick Test Run (Using Pre-packaged Data)
