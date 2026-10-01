@@ -523,7 +523,7 @@ sudo docker run --rm -v $(pwd):/Metrico_project mantrilabnabi/metrico_viz:v1 \
 sudo docker run --rm -v $(pwd):/Metrico_project mantrilabnabi/metrico_viz:v1 \
   python3 /Metrico_project/ko_circos_plot.py \
     -i /Metrico_project/input_file/all_sample_ko.tsv \
-    --mod /Metrico_project/input_file/all_module.tsv \
+    -mod /Metrico_project/input_file/all_module.tsv \
     -m /Metrico_project/input_file/Plant-host.csv \
     -o /Metrico_project/output --prefix KO_Circos
 ```
