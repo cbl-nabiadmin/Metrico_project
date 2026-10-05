@@ -558,3 +558,17 @@ Each script outputs high-resolution static PNG figures suitable for publication 
 * **EC & KO Circos Modules:** Produce circular genomic/metabolic chord plots (`<PREFIX>_plot.png`) and interactive shared feature matrices (`<PREFIX>_shared_matrix.html`).
 * **Pathway Bubble Module:** Produces faceted bubble plots mapping pathway abundance and peak taxon drivers (`<PREFIX>.png` and `<PREFIX>.html`).
 * **Ordination & PERMANOVA Module:** Produces PCoA scatter plots with 95% confidence ellipses (`<PREFIX>_pcoa_plot.png`) and summary statistics tables (`<PREFIX>_permanova_results.txt`).
+
+---
+
+## 📧 Contact & Support
+
+For queries, bug reports, feature requests, or collaboration regarding Metrico_project, please contact:
+
+    Shrikant Mantri: shrikant@nabi.res.in
+
+    Ardhendu Chakrabortty: ardhenduchakraborty18@gmail.com
+
+    Computational Biology Laboratory (CBL)
+
+    National Agri-Food Biotechnology Institute (NABI), Mohali, Punjab, India
