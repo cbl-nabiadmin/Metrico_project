@@ -565,10 +565,8 @@ Each script outputs high-resolution static PNG figures suitable for publication 
 
 For queries, bug reports, feature requests, or collaboration regarding Metrico_project, please contact:
 
-    Shrikant Mantri: shrikant@nabi.res.in
+  ** Shrikant Mantri: shrikant@nabi.res.in
 
-    Ardhendu Chakrabortty: ardhenduchakraborty18@gmail.com
+  ** Ardhendu Chakrabortty: ardhenduchakraborty18@gmail.com
 
-    Computational Biology Laboratory (CBL)
-
-    National Agri-Food Biotechnology Institute (NABI), Mohali, Punjab, India
+Computational Biology Laboratory (CBL), National Agri-Food Biotechnology Institute (NABI), Mohali, Punjab, India
